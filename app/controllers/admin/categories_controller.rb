@@ -22,6 +22,7 @@ class Admin::CategoriesController < ApplicationController
     #     if @product.save
     #       redirect_to [:admin, :products], notice: 'Product created!'
     #     else
+    
     #       render :new
     #     end
     private
