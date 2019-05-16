@@ -2,7 +2,9 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
+    @line_items = @order.line_items
   end
+
 
   def create
     charge = perform_stripe_charge
@@ -18,7 +20,7 @@ class OrdersController < ApplicationController
   rescue Stripe::CardError => e
     redirect_to cart_path, flash: { error: e.message }
   end
-
+  
   private
 
   def empty_cart!
