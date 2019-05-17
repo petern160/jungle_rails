@@ -133,4 +133,7 @@ cat3.products.create!({
 })
 
 
+Review.create(product_id: 1, user_id: 1, description: "this was amazing from user_id 1", rating: 4, created_at: Date.today, updated_at: Date.today)
+Review.create(product_id: 2, user_id: 2, description: "this was amazing from user_id 2", rating: 3, created_at: Date.today, updated_at: Date.today)
+
 puts "DONE!"
