@@ -1,5 +1,6 @@
-<section class="cart-show">
 
+<% unless cart.size == 0 %>
+<section class="cart-show">
   <header class="page-header">
     <h1>My Cart</h1>
   </header>
@@ -49,4 +50,13 @@
     </div>
   </div>
 
+
+
 </section>
+<% else %>
+<div class="text-center">
+<h1  >OOPS</h1>
+<img  src="https://iticsystem.com/img/empty-cart.png">
+<h1 ><%= link_to 'Click here to go back to the homepage', root_path %></h1>
+</div>
+<% end %>
