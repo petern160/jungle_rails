@@ -5,7 +5,17 @@
   </header>
 
   <article class="product-detail">
+  <%= form_for @newReview, url: product_reviews_path(@product) do |f| %>
+    <h2>New Review</h2>
+ 
+   
 
+    <%= f.label :description %><br>
+    <%= f.text_area :description %><br>
+    <%= f.select :rating, options_for_select(0..5), { prompt: "Rate the Product" } %>
+
+    <%= f.submit("Create review") %><br>
+  <% end %>
     <div class="row">
 
       <div class="col-sm-4">
@@ -22,6 +32,10 @@
           <dd><%= @product.quantity %></dd>
           <dt>Price</dt>
           <dd><%= @product.price %></dd>
+        </dl>
+        <dl class="dl-horizontal">
+           <dt>Average Rating </dt>
+            <dd><%= @average_rating  %> <%= link_to 'leave a review here', product_reviews_path(@product) %></dd>
         </dl>
       </div>
     </div>

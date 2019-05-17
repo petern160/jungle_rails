@@ -10,6 +10,12 @@ Rails.application.routes.draw do
     post   :remove_item
   end
 
+ resources :products do
+  resources :reviews
+  delete   :reviews
+ end
+ 
+
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'

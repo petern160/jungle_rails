@@ -1,12 +1,24 @@
+<style>
+.container {
+  margin: auto;
+  top: 0;
+ 
+}
+</style>
 <h1>Signup!</h1>
 
+
+<div class="form-group">
 <%= form_for :user, url: '/users' do |f| %>
 
   Name: <%= f.text_field :name %>
   Last Name: <%= f.text_field :last_name %>
   Email: <%= f.text_field :email %>
+    <div class="form-group row">
   Password: <%= f.password_field :password %>
   Password Confirmation: <%= f.password_field :password_confirmation %>
+  </div>
   <%= f.submit "Submit" %>
 
 <% end %>
+</div>
