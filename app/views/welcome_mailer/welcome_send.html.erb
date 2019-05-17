@@ -1,0 +1,10 @@
+<h1>thank you for purchase </h1>
+<p>your order id is: <%= @id %> </p>
+<p>your total is: <%= @total %> </p>
+<p>your items are: <% @line_items.each do |item|%>
+<%=item.product.name%>
+<%end%>
+</p>
+
+
+

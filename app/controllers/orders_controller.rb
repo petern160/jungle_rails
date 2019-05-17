@@ -5,7 +5,6 @@ class OrdersController < ApplicationController
     @line_items = @order.line_items
   end
 
-
   def create
     charge = perform_stripe_charge
     order  = create_order(charge)
