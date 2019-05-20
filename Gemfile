@@ -42,6 +42,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'quiet_assets'
+  gem 'rspec-rails', '~> 3.5'
   gem 'dotenv-rails'
 end
 
@@ -57,3 +58,4 @@ group :production do
   gem 'newrelic_rpm'
   gem 'rails_12factor'
 end
+
