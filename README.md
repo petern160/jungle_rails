@@ -1,7 +1,12 @@
-# Jungle
+# Jungle Rials E-commerce
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+![](home.gif)
+![](payment.gif)
+![](empty.gif)
 
+A mini e-commerce application built with Rails 4.2. It has
+a strip card system where users can add items to the cart and checkout. After purchase the user will also get a receipt sent
+to the email registered.
 
 ## Setup
 
@@ -23,6 +28,6 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 
 ## Dependencies
 
-* Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
-* PostgreSQL 9.x
-* Stripe
+- Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
+- PostgreSQL 9.x
+- Stripe
