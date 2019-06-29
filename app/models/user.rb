@@ -23,6 +23,6 @@ class User < ActiveRecord::Base
     def passwordSame?
       self.password == self.password_confirmation
     end
-  end
+  
 
  
